@@ -1,6 +1,6 @@
 import cloudinary from "../lib/cloudinary.js";
 import { generateToken } from "../lib/utils.js";
-import User from "../models/user.js";
+import User from "../models/User.js";
 // Function for signup
 export const signup = async () => {
   const { fullName, email, password, bio } = req.body;
@@ -65,7 +65,7 @@ export const login = async () => {
 
 //Controller to check if user is authenticated
 
-export default checkAuth = (req,res) =>{
+export const checkAuth =  (req,res) =>{
   res.json({success: true, user: req.user});
 }
 
